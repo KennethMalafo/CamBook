@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "282616942362",
+    "project_id": "cambook-c6ad5",
+    "storage_bucket": "cambook-c6ad5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282616942362:android:f804d9980e0624de35a6a3",
+        "android_client_info": {
+          "package_name": "com.cambook_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy1mbYNnX4mhUQL6ZmiwcCp6fi_rEGbDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

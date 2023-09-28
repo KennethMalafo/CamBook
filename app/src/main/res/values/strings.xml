@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CamBook_App</string>
+    <string name="log_in">LOG IN</string>
+    <string name="create_new_account">CREATE AN ACCOUNT</string>
+    <string name="book_now">Book Now!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="enter_the_name_you_use_in_real_life">Enter the name you use in real life.</string>
+    <string name="first_name">First Name</string>
+    <string name="surname">Surname</string>
+    <string name="next">Next</string>
+    <string name="create_username">Create Username</string>
+    <string name="enter_your_username">Enter your Username</string>
+    <string name="user_name">Username</string>
+    <string name="put_your_email_address">Put your Email address</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="email_address">Email address</string>
+    <string name="put_your_permanent_address">Put your permanent address</string>
+    <string name="use_your_permanent_address">Use your permanent Address</string>
+    <string name="select_region">Select Region</string>
+    <string name="what_s_your_date_of_birth">What\'s your Date of Birth?</string>
+    <string name="date_of_birth">Date of Birth:</string>
+    <string name="pick_a_date">Pick a Date</string>
+    <string name="what_s_your_gender">What\'s your Gender?</string>
+    <string name="choose_your_date_of_birth">Choose your Date of Birth</string>
+    <string name="choose_your_gender">Choose your Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="by_tapping_i_agree_you_agree_to_create_an_account_and_to_cambook_s_terms_and_privacy_policies">By tapping <b>I agree</b>, you agree to create an account and to Cambook’s terms and Privacy Policies.</string>
+    <string name="the_privacy_policy_describes_the_ways_we_can_use_the_nformation_we_collect_when_you_create_an_account">The <b>Privacy Policy</b> describes the ways we can use the information we collect when you create an account.</string>
+</resources>
