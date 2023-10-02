@@ -9,6 +9,8 @@ public class Users {
     String email ;
     String password;
 
+    public Users(){}
+
     public Users(String fname, String sname, String username, String dob, String gender, String email, String password) {
         this.fname = fname;
         this.sname = sname;

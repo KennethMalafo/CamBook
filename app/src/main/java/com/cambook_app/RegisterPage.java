@@ -179,6 +179,9 @@ public class RegisterPage extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
 
+                                    // Get the UID of the user
+                                    String uid = user.getUid();
+
                                     // Send email verification
                                     user.sendEmailVerification()
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -203,7 +206,7 @@ public class RegisterPage extends AppCompatActivity {
                                             });
 
                                     Users users = new Users(fname, sname, username, dob, gender, email, password);
-                                    UsersInfo.push().setValue(users);
+                                    UsersInfo.child(uid).setValue(users);
                                 } else {
                                     Toast.makeText(RegisterPage.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
