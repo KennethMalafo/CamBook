@@ -1,9 +1,13 @@
 package com.cambook_app;
 
+import java.security.PublicKey;
+
 public class Users {
     String fname;
-    String sname;
     String username;
+    String province;
+    String city;
+    String street;
     String dob;
     String gender;
     String email ;
@@ -11,10 +15,12 @@ public class Users {
 
     public Users(){}
 
-    public Users(String fname, String sname, String username, String dob, String gender, String email, String password) {
+    public Users(String fname, String username,String province, String city, String street, String dob, String gender, String email, String password) {
         this.fname = fname;
-        this.sname = sname;
         this.username = username;
+        this.province = province;
+        this.city = city;
+        this.street = street;
         this.dob = dob;
         this.gender = gender;
         this.email = email;
@@ -25,13 +31,12 @@ public class Users {
         return fname;
     }
 
-    public String getSname() {
-        return sname;
-    }
-
     public String getUsername() {
         return username;
     }
+    public String getProvince(){return province;}
+    public String getCity(){return city;}
+    public String getStreet(){return street;}
 
     public String getDob() {
         return dob;

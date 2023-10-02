@@ -38,8 +38,10 @@ import java.util.concurrent.TimeUnit;
 
 public class RegisterPage extends AppCompatActivity {
     TextInputEditText Fname;
-    TextInputEditText Sname;
     TextInputEditText Username;
+    TextInputEditText Province;
+    TextInputEditText City;
+    TextInputEditText Street;
     TextInputEditText Email;
     TextInputEditText Password;
     Button DOB, Register;
@@ -49,7 +51,7 @@ public class RegisterPage extends AppCompatActivity {
     DatabaseReference UsersInfo;
     ImageButton arrow1;
 
-    String fname, sname, username, dob, gender, email, password;
+    String fname, username, province, city, street, dob, gender, email, password;
     private boolean dobButtonClicked = false;
 
     @Override
@@ -60,8 +62,10 @@ public class RegisterPage extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         Fname = findViewById(R.id.fname);
-        Sname = findViewById(R.id.sname);
         Username = findViewById(R.id.username);
+        Province = findViewById(R.id.province);
+        City = findViewById(R.id.city);
+        Street = findViewById(R.id.street);
         DOB = findViewById(R.id.DoB);
         Gender = findViewById(R.id.gender);
         Email = findViewById(R.id.Email);
@@ -124,8 +128,10 @@ public class RegisterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 fname = Objects.requireNonNull(Fname.getText()).toString();
-                sname = Objects.requireNonNull(Sname.getText()).toString();
                 username = Objects.requireNonNull(Username.getText()).toString();
+                province = Objects.requireNonNull(Province.getText().toString());
+                city = Objects.requireNonNull(City.getText().toString());
+                street = Objects.requireNonNull(Street.getText().toString());
                 dob = String.valueOf(DOB.getText());
                 int selectedId = Gender.getCheckedRadioButtonId();
                 gender = "";
@@ -136,11 +142,19 @@ public class RegisterPage extends AppCompatActivity {
                     Toast.makeText(RegisterPage.this, "Enter your First name!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(sname)) {
-                    Toast.makeText(RegisterPage.this, "Enter your Surname!", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(username)) {
+                    Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(username)) {
+                if (TextUtils.isEmpty(province)) {
+                    Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(city)) {
+                    Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(street)) {
                     Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -181,31 +195,10 @@ public class RegisterPage extends AppCompatActivity {
 
                                     // Get the UID of the user
                                     String uid = user.getUid();
-
-                                    // Send email verification
-                                    user.sendEmailVerification()
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> emailTask) {
-                                                    if (emailTask.isSuccessful()) {
-                                                        // Email sent successfully.
-                                                        Toast.makeText(RegisterPage.this, "Verification email sent.",
-                                                                Toast.LENGTH_SHORT).show();
-                                                        // Redirect to a screen where you can inform the user
-                                                        // that they need to verify their email.
-                                                        Intent verificationIntent = new Intent(RegisterPage.this, policy_agreement.class);
-                                                        startActivity(verificationIntent);
-                                                        finish(); // Close the current activity
-
-                                                    } else {
-                                                        // Email sending failed.
-                                                        Toast.makeText(RegisterPage.this, "Failed to send verification email.",
-                                                                Toast.LENGTH_SHORT).show();
-                                                    }
-                                                }
-                                            });
-
-                                    Users users = new Users(fname, sname, username, dob, gender, email, password);
+                                    Intent verificationIntent = new Intent(RegisterPage.this, policy_agreement.class);
+                                    startActivity(verificationIntent);
+                                    finish(); // Close the current activity
+                                    Users users = new Users(fname, username, province, city, street, dob, gender, email, password);
                                     UsersInfo.child(uid).setValue(users);
                                 } else {
                                     Toast.makeText(RegisterPage.this, "Authentication failed.",

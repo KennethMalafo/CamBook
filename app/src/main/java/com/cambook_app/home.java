@@ -64,7 +64,6 @@ public class home extends AppCompatActivity{
             startActivity(intent);
         } else {
             showUserProfile(firebaseUser);
-
         }
 
         logOUT.setOnClickListener(new View.OnClickListener() {

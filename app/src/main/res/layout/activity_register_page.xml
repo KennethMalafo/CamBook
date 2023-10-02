@@ -82,7 +82,8 @@
                 android:layout_below="@+id/t2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:hint="@string/first_name">
+                android:hint="Full name"
+                app:startIconDrawable="@drawable/fullname_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fname"
@@ -95,31 +96,11 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sname_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/fname_layout"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:hint="@string/surname">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sname"
-                    android:layout_width="323dp"
-                    android:layout_height="65dp"
-                    android:layout_below="@+id/fname_layout"
-                    android:background="@drawable/txt_input_custom_outline"
-                    android:fontFamily="@font/interregular"
-                    android:paddingStart="10dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
             <TextView
                 android:id="@+id/t6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/sname_layout"
+                android:layout_below="@+id/fname_layout"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
@@ -135,7 +116,8 @@
                 android:layout_below="@+id/t6"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:hint="Username">
+                android:hint="Username"
+                app:startIconDrawable="@drawable/username_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/username"
@@ -163,19 +145,77 @@
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
-            <fragment
-                android:id="@+id/map_fragment"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/province_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/t9"
-                android:layout_marginTop="20dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="Province"
+                app:startIconDrawable="@drawable/location_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/province"
+                    android:layout_width="323dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/txt_input_custom_outline"
+                    android:fontFamily="@font/interregular"
+                    android:paddingStart="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/city_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/province_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="City"
+                app:startIconDrawable="@drawable/location_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/city"
+                    android:layout_width="323dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/txt_input_custom_outline"
+                    android:fontFamily="@font/interregular"
+                    android:paddingStart="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/street_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="Street"
+                app:startIconDrawable="@drawable/location_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/street"
+                    android:layout_width="323dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/txt_input_custom_outline"
+                    android:fontFamily="@font/interregular"
+                    android:paddingStart="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/t10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/map_fragment"
+                android:layout_below="@+id/street_layout"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
@@ -219,7 +259,7 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     android:clickable="true"
-                    android:focusable="true"/>
+                    android:focusable="true" />
             </LinearLayout>
 
             <TextView
@@ -285,7 +325,8 @@
                 android:layout_below="@+id/t7"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:hint="Email address">
+                android:hint="Email address"
+                app:startIconDrawable="@drawable/login_black_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Email"
@@ -323,6 +364,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Password"
+                app:startIconDrawable="@drawable/password_24"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
                 app:passwordToggleEnabled="true">

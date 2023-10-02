@@ -66,10 +66,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/username"
             android:layout_marginTop="20dp"
             android:background="@drawable/curve2"
             android:text="Log out kana boss"
+            android:textColor="@color/white"
             android:fontFamily="@font/oswaldregular"/>
 
     </RelativeLayout>

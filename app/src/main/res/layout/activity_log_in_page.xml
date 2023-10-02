@@ -71,7 +71,8 @@
                 android:layout_below="@+id/book"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:hint="Email">
+                android:hint="Email"
+                app:startIconDrawable="@drawable/login_black_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Email"
@@ -91,6 +92,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Password"
+                app:startIconDrawable="@drawable/password_24"
                 app:passwordToggleEnabled="true"
                 app:counterEnabled="true"
                 app:counterMaxLength="20">
