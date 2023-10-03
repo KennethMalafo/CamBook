@@ -34,7 +34,7 @@ public class policy_agreement extends AppCompatActivity {
             }
 
             private void create_user() {
-                Intent intent = new Intent(policy_agreement.this, home.class);
+                Intent intent = new Intent(policy_agreement.this, user_profile.class);
                 startActivity(intent);
             }
         });

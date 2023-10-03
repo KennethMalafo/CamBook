@@ -195,6 +195,8 @@ public class RegisterPage extends AppCompatActivity {
 
                                     // Get the UID of the user
                                     String uid = user.getUid();
+                                    Toast.makeText(RegisterPage.this, "Successfully Created an Account",
+                                            Toast.LENGTH_SHORT).show();
                                     Intent verificationIntent = new Intent(RegisterPage.this, policy_agreement.class);
                                     startActivity(verificationIntent);
                                     finish(); // Close the current activity
