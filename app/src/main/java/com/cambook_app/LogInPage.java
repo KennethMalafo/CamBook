@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -59,9 +60,13 @@ public class LogInPage extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(LogInPage.this, "Enter email!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-
-                else if (TextUtils.isEmpty(password)) {
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    Toast.makeText(LogInPage.this, "Enter a valid email!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(password)) {
                     Toast.makeText(LogInPage.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -76,8 +81,9 @@ public class LogInPage extends AppCompatActivity {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Toast.makeText(LogInPage.this, "You're logged in!",
                                             Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(LogInPage.this, user_profile.class);
+                                    Intent intent = new Intent(LogInPage.this, homepage.class);
                                     startActivity(intent);
+                                    finish();
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(LogInPage.this, "Authentication failed.",

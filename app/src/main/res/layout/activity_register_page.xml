@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_for_log"
+    android:background="@drawable/gradient_background"
     tools:context=".RegisterPage">
 
     <LinearLayout
@@ -18,12 +18,13 @@
 
             <ImageButton
                 android:id="@+id/arrow1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="35dp"
+                android:background="#00ffffff"
                 android:clickable="true"
                 android:focusable="true"
                 android:src="@drawable/baseline_arrow_back_24" />
@@ -37,7 +38,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/oswaldsemibold"
                 android:text="Create Account"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="32sp" />
 
             <ImageView
@@ -59,7 +60,7 @@
                 android:fontFamily="@font/intersemibold"
                 android:gravity="center_horizontal"
                 android:text="Create an account so you can book your reservations now!"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
@@ -72,7 +73,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="@string/enter_the_name_you_use_in_real_life"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -83,6 +84,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Full name"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/fullname_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -106,7 +109,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="What should we call you?"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -117,6 +120,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Username"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/username_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -142,7 +147,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="@string/use_your_permanent_address"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -153,6 +158,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Province"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/location_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -175,6 +182,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="City"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/location_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -197,6 +206,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Street"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/location_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -221,7 +232,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="@string/choose_your_date_of_birth"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -242,9 +253,9 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/interregular"
                     android:gravity="left|center"
-                    android:textColor="@color/black"
                     android:hint="@string/date_of_birth"
-                    android:textColorHint="@color/black"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
                     android:textSize="16sp" />
 
                 <Button
@@ -253,13 +264,13 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:background="@drawable/curve2"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:fontFamily="@font/intersemibold"
                     android:gravity="center"
                     android:text="@string/pick_a_date"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:clickable="true"
-                    android:focusable="true" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <TextView
@@ -272,7 +283,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="@string/choose_your_gender"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <RadioGroup
@@ -281,8 +292,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/t4"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -315,7 +326,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="@string/enter_your_email_address"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -326,6 +337,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Email address"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/login_black_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -352,7 +365,7 @@
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="Create a password with at least 6 letters or numbers. It should be something that others can’t guess."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
 
@@ -364,10 +377,12 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Password"
-                app:startIconDrawable="@drawable/password_24"
+                android:textColorHint="@color/black"
+                android:theme="@style/EditTextThemeOverlay"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/password_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Password"
@@ -375,8 +390,8 @@
                     android:layout_height="65dp"
                     android:layout_below="@+id/t8"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/interregular"
                     android:background="@drawable/txt_input_custom_outline"
+                    android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -403,9 +418,9 @@
                 android:fontFamily="@font/intermedium"
                 android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:text="REGISTER"
+                android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
     </LinearLayout>

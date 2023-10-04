@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_for_log"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/logo1"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/logo2" />
+                android:src="@drawable/logo2o" />
 
             <ImageView
                 android:id="@+id/pic1"

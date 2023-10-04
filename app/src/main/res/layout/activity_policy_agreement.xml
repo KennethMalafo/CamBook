@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_for_log"
+    android:background="@drawable/gradient_background"
     tools:context=".policy_agreement">
 
     <LinearLayout
@@ -26,7 +26,7 @@
                 android:layout_marginTop="100dp"
                 android:fontFamily="@font/intersemibold"
                 android:text="Agree to Cambook’s terms and policies"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="32sp" />
 
             <TextView
@@ -82,7 +82,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:text="I agree to the terms and policies"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <com.google.android.material.textview.MaterialTextView

@@ -147,15 +147,15 @@ public class RegisterPage extends AppCompatActivity {
                     return;
                 }
                 if (TextUtils.isEmpty(province)) {
-                    Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterPage.this, "Enter your Province in your address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(city)) {
-                    Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterPage.this, "Enter your City in your address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(street)) {
-                    Toast.makeText(RegisterPage.this, "Enter your Username!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterPage.this, "Enter the Street in your address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (!dobButtonClicked) {
