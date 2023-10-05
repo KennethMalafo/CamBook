@@ -7,7 +7,7 @@ public class Users {
     String username;
     String province;
     String city;
-    String street;
+    String barangay;
     String dob;
     String gender;
     String email ;
@@ -15,12 +15,12 @@ public class Users {
 
     public Users(){}
 
-    public Users(String fname, String username,String province, String city, String street, String dob, String gender, String email, String password) {
+    public Users(String fname, String username,String province, String city, String barangay, String dob, String gender, String email, String password) {
         this.fname = fname;
         this.username = username;
         this.province = province;
         this.city = city;
-        this.street = street;
+        this.barangay = barangay;
         this.dob = dob;
         this.gender = gender;
         this.email = email;
@@ -36,7 +36,7 @@ public class Users {
     }
     public String getProvince(){return province;}
     public String getCity(){return city;}
-    public String getStreet(){return street;}
+    public String getBarangay(){return barangay;}
 
     public String getDob() {
         return dob;

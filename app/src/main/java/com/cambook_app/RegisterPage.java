@@ -35,13 +35,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Calendar;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 public class RegisterPage extends AppCompatActivity {
     TextInputEditText Fname;
     TextInputEditText Username;
     TextInputEditText Province;
     TextInputEditText City;
-    TextInputEditText Street;
+    TextInputEditText Barangay;
     TextInputEditText Email;
     TextInputEditText Password;
     Button DOB, Register;
@@ -51,8 +52,16 @@ public class RegisterPage extends AppCompatActivity {
     DatabaseReference UsersInfo;
     ImageButton arrow1;
 
-    String fname, username, province, city, street, dob, gender, email, password;
+    String fname, username, province, city, barangay, dob, gender, email, password;
     private boolean dobButtonClicked = false;
+
+    private static final Pattern PASSWORD_PATTERN =
+
+            Pattern.compile("^" +
+
+                    //"(?=S+$)" +                     // no white spaces
+                    ".{6,}" +                              // at least 6 characters
+                    "$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +74,7 @@ public class RegisterPage extends AppCompatActivity {
         Username = findViewById(R.id.username);
         Province = findViewById(R.id.province);
         City = findViewById(R.id.city);
-        Street = findViewById(R.id.street);
+        Barangay = findViewById(R.id.barangay);
         DOB = findViewById(R.id.DoB);
         Gender = findViewById(R.id.gender);
         Email = findViewById(R.id.Email);
@@ -131,7 +140,7 @@ public class RegisterPage extends AppCompatActivity {
                 username = Objects.requireNonNull(Username.getText()).toString();
                 province = Objects.requireNonNull(Province.getText().toString());
                 city = Objects.requireNonNull(City.getText().toString());
-                street = Objects.requireNonNull(Street.getText().toString());
+                barangay = Objects.requireNonNull(Barangay.getText().toString());
                 dob = String.valueOf(DOB.getText());
                 int selectedId = Gender.getCheckedRadioButtonId();
                 gender = "";
@@ -154,8 +163,8 @@ public class RegisterPage extends AppCompatActivity {
                     Toast.makeText(RegisterPage.this, "Enter your City in your address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(street)) {
-                    Toast.makeText(RegisterPage.this, "Enter the Street in your address!", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(barangay)) {
+                    Toast.makeText(RegisterPage.this, "Enter the Barangay in your address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (!dobButtonClicked) {
@@ -184,6 +193,10 @@ public class RegisterPage extends AppCompatActivity {
                     Toast.makeText(RegisterPage.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (!PASSWORD_PATTERN.matcher(password).matches()) {
+                    Toast.makeText(RegisterPage.this, "Password too weak!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -200,7 +213,7 @@ public class RegisterPage extends AppCompatActivity {
                                     Intent verificationIntent = new Intent(RegisterPage.this, policy_agreement.class);
                                     startActivity(verificationIntent);
                                     finish(); // Close the current activity
-                                    Users users = new Users(fname, username, province, city, street, dob, gender, email, password);
+                                    Users users = new Users(fname, username, province, city, barangay, dob, gender, email, password);
                                     UsersInfo.child(uid).setValue(users);
                                 } else {
                                     Toast.makeText(RegisterPage.this, "Authentication failed.",

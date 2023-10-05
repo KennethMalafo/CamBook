@@ -20,17 +20,24 @@ import com.google.firebase.database.ValueEventListener;
 
 public class user_profile extends AppCompatActivity{
 
-    TextView Acc, Username;
-    private String Email, UserName;
+    TextView Fname, Username, Province, City, Barangay, DOB, Gender, Email_Address;
+    private String UserName, fName, eMail, pRovince, cIty, bArangay, dOb, gEnder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        Button logOUT = findViewById(R.id.LogOUT);
-        Acc = findViewById(R.id.Acc);
+        Fname = findViewById(R.id.fname);
         Username = findViewById(R.id.username);
+        Province = findViewById(R.id.province);
+        City = findViewById(R.id.city);
+        Barangay = findViewById(R.id.barangay);
+        DOB = findViewById(R.id.dob);
+        Gender = findViewById(R.id.gender);
+        Email_Address = findViewById(R.id.email);
+
+        Button logOUT = findViewById(R.id.LogOUT);
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = auth.getCurrentUser();
@@ -64,12 +71,24 @@ public class user_profile extends AppCompatActivity{
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Users users = snapshot.getValue(Users.class);
                 if (users != null){
-                    Email = firebaseUser.getEmail();
+                    fName = users.fname;
                     UserName = users.username;
+                    pRovince = users.province;
+                    cIty = users.city;
+                    bArangay = users.barangay;
+                    dOb = users.dob;
+                    gEnder = users.gender;
+                    eMail = firebaseUser.getEmail();
 
                     //set text
-                    Acc.setText(Email);
+                    Fname.setText(fName);
                     Username.setText(UserName);
+                    Province.setText(pRovince);
+                    City.setText(cIty);
+                    Barangay.setText(bArangay);
+                    DOB.setText(dOb);
+                    Gender.setText(gEnder);
+                    Email_Address.setText(eMail);
                 }
             }
 

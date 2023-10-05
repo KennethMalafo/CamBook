@@ -20,6 +20,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.regex.Pattern;
+
 public class LogInPage extends AppCompatActivity {
 
     TextInputEditText Email, Password;
@@ -27,6 +29,13 @@ public class LogInPage extends AppCompatActivity {
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     ImageButton arrow1;
+    private static final Pattern PASSWORD_PATTERN =
+
+            Pattern.compile("^" +
+
+                    //"(?=S+$)" +                     // no white spaces
+                    ".{6,}" +                              // at least 6 characters
+                    "$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +77,10 @@ public class LogInPage extends AppCompatActivity {
                 }
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(LogInPage.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!PASSWORD_PATTERN.matcher(password).matches()) {
+                    Toast.makeText(LogInPage.this, "Password too weak!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
