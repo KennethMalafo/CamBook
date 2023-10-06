@@ -38,13 +38,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 public class RegisterPage extends AppCompatActivity {
-    TextInputEditText Fname;
-    TextInputEditText Username;
-    TextInputEditText Province;
-    TextInputEditText City;
-    TextInputEditText Barangay;
-    TextInputEditText Email;
-    TextInputEditText Password;
+    TextInputEditText Fname, Username, Province, City, Barangay, Email, Password;
     Button DOB, Register;
     RadioGroup Gender;
     FirebaseAuth mAuth;
@@ -58,8 +52,7 @@ public class RegisterPage extends AppCompatActivity {
     private static final Pattern PASSWORD_PATTERN =
 
             Pattern.compile("^" +
-
-                    //"(?=S+$)" +                     // no white spaces
+                    "(?=S+$)" +                     // no white spaces
                     ".{6,}" +                              // at least 6 characters
                     "$");
 
@@ -168,8 +161,6 @@ public class RegisterPage extends AppCompatActivity {
                     return;
                 }
                 if (!dobButtonClicked) {
-                    // The user didn't click the "DOB" button.
-                    // Show an error message or take appropriate action.
                     Toast.makeText(RegisterPage.this, "Choose your Date of Birth", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -177,7 +168,6 @@ public class RegisterPage extends AppCompatActivity {
                     RadioButton selectedGender = findViewById(selectedId);
                     gender = selectedGender.getText().toString();
                 } else {
-                    // Gender is not selected, show an error message
                     Toast.makeText(RegisterPage.this, "Please select a gender", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -197,6 +187,14 @@ public class RegisterPage extends AppCompatActivity {
                     Toast.makeText(RegisterPage.this, "Password too weak!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (password.contains(" ")){
+                    Toast.makeText(RegisterPage.this, "Your password mustn't have a space!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (password.contains(".")){
+                    Toast.makeText(RegisterPage.this, "Your password mustn't have a period!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -212,7 +210,7 @@ public class RegisterPage extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                     Intent verificationIntent = new Intent(RegisterPage.this, policy_agreement.class);
                                     startActivity(verificationIntent);
-                                    finish(); // Close the current activity
+                                    finish();
                                     Users users = new Users(fname, username, province, city, barangay, dob, gender, email, password);
                                     UsersInfo.child(uid).setValue(users);
                                 } else {

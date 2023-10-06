@@ -84,16 +84,18 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Full name"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
-                app:startIconDrawable="@drawable/fullname_24">
+                app:startIconDrawable="@drawable/fullname_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fname"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -120,18 +122,20 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Username"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
-                app:startIconDrawable="@drawable/username_24">
+                app:startIconDrawable="@drawable/username_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/username"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/t6"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -158,17 +162,19 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Province"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
-                app:startIconDrawable="@drawable/location_24">
+                app:startIconDrawable="@drawable/location_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/province"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -182,17 +188,19 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="City"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
-                app:startIconDrawable="@drawable/location_24">
+                app:startIconDrawable="@drawable/location_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/city"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -206,17 +214,19 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Barangay"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
-                app:startIconDrawable="@drawable/location_24">
+                app:startIconDrawable="@drawable/location_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/barangay"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -303,7 +313,8 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/txt_input_custom_outline"
                     android:padding="10dp"
-                    android:text="@string/male" />
+                    android:text="@string/male"
+                    android:textColor="@color/white"/>
 
                 <RadioButton
                     android:id="@+id/radio_female"
@@ -312,7 +323,8 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/txt_input_custom_outline"
                     android:padding="10dp"
-                    android:text="@string/female" />
+                    android:text="@string/female"
+                    android:textColor="@color/white"/>
             </RadioGroup>
 
 
@@ -337,9 +349,12 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Email address"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
-                app:startIconDrawable="@drawable/login_black_24">
+                app:startIconDrawable="@drawable/login_black_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Email"
@@ -348,7 +363,6 @@
                     android:layout_below="@+id/book"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -377,20 +391,22 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:hint="Password"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:theme="@style/EditTextThemeOverlay"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
                 app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/password_24">
+                app:startIconDrawable="@drawable/password_24"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Password"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/t8"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/txt_input_custom_outline"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
             </com.google.android.material.textfield.TextInputLayout>

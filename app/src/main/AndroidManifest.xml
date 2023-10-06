@@ -16,6 +16,9 @@
         android:theme="@style/Theme.CamBook_App"
         tools:targetApi="31">
         <activity
+            android:name=".features"
+            android:exported="false" />
+        <activity
             android:name=".settings"
             android:exported="false" />
         <activity

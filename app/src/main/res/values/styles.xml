@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="EditTextThemeOverlay" parent="ThemeOverlay.AppCompat">
-        <item name="colorAccent">@android:color/black</item>
+    <style name="EditTextThemeOverlay" parent="ThemeOverlay.Material3">
+        <item name="colorAccent">@android:color/white</item>
     </style>
 </resources>
