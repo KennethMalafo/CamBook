@@ -131,9 +131,9 @@ public class RegisterPage extends AppCompatActivity {
             public void onClick(View view) {
                 fname = Objects.requireNonNull(Fname.getText()).toString();
                 username = Objects.requireNonNull(Username.getText()).toString();
-                province = Objects.requireNonNull(Province.getText().toString());
-                city = Objects.requireNonNull(City.getText().toString());
-                barangay = Objects.requireNonNull(Barangay.getText().toString());
+                province = Objects.requireNonNull(Objects.requireNonNull(Province.getText()).toString());
+                city = Objects.requireNonNull(Objects.requireNonNull(City.getText()).toString());
+                barangay = Objects.requireNonNull(Objects.requireNonNull(Barangay.getText()).toString());
                 dob = String.valueOf(DOB.getText());
                 int selectedId = Gender.getCheckedRadioButtonId();
                 gender = "";

@@ -32,6 +32,15 @@ public class homepage extends AppCompatActivity {
             }
         });
 
+        Ep_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(homepage.this, features.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
