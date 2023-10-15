@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 public class settings extends AppCompatActivity {
@@ -17,13 +16,10 @@ public class settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         backButton = findViewById(R.id.arrow1);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(settings.this, homepage.class);
-                startActivity(intent);
-                finish();
-            }
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(settings.this, homepage.class);
+            startActivity(intent);
+            finish();
         });
 
     }

@@ -15,7 +15,6 @@ public class SplashScreen extends AppCompatActivity {
 
     private static final int SPLASH_SCREEN = 2500;
     ImageView logo1, logo2;
-    TextView apptxt;
     Animation top, bottom;
 
     @Override
@@ -26,21 +25,16 @@ public class SplashScreen extends AppCompatActivity {
 
         logo1 = findViewById(R.id.logopic);
         logo2 = findViewById(R.id.logotxt);
-        apptxt = findViewById(R.id.app_txt);
 
         top = AnimationUtils.loadAnimation(this, R.anim.top);
         bottom = AnimationUtils.loadAnimation(this, R.anim.bottom);
         logo1.setAnimation(top);
         logo2.setAnimation(bottom);
-        apptxt.setAnimation(bottom);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         },SPLASH_SCREEN);
     }
 }

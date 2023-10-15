@@ -34,9 +34,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".user_profile"
-            android:exported="false" />
-        <activity
             android:name=".policy_agreement"
             android:exported="false" />
         <activity
@@ -49,7 +46,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".features"
+            android:name=".services"
             android:exported="false" />
         <activity
             android:name=".settings"

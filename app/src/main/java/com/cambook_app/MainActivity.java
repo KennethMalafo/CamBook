@@ -3,7 +3,6 @@ package com.cambook_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
     FirebaseAuth mAuth;
 
     @Override
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        button = (Button) findViewById(R.id.create);
+        Button button = (Button) findViewById(R.id.create);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,19 +64,9 @@ public class MainActivity extends AppCompatActivity {
         //Exit Dialogue
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
         alertDialog.setTitle("Exit App");
-        alertDialog.setMessage("Do you want to Exit Cambook?");
-        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finishAffinity();
-            }
-        });
-        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        alertDialog.setMessage("Do you want to Exit CamBook?");
+        alertDialog.setPositiveButton("Yes", (dialog, which) -> finishAffinity());
+        alertDialog.setNegativeButton("No", (dialog, which) -> dialog.dismiss());
         alertDialog.show();
     }
 }

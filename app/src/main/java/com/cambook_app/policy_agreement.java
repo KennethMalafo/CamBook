@@ -40,17 +40,14 @@ public class policy_agreement extends AppCompatActivity {
             }
         });
         // Add a listener to enable/disable the button based on the checkbox state
-        policyCheckbox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                button.setEnabled(policyCheckbox.isChecked());
+        policyCheckbox.setOnClickListener(view -> {
+            button.setEnabled(policyCheckbox.isChecked());
 
-                // Update the button background based on the checkbox state
-                int buttonBackground = policyCheckbox.isChecked() ?
-                        R.drawable.color_enabled_button_background :
-                        R.drawable.color_disabled_button_background;
-                button.setBackgroundResource(buttonBackground);
-            }
+            // Update the button background based on the checkbox state
+            int buttonBackground = policyCheckbox.isChecked() ?
+                    R.drawable.color_enabled_button_background :
+                    R.drawable.color_disabled_button_background;
+            button.setBackgroundResource(buttonBackground);
         });
     }
 }

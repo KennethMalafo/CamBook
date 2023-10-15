@@ -29,4 +29,5 @@
     <string name="female">Female</string>
     <string name="by_tapping_i_agree_you_agree_to_create_an_account_and_to_cambook_s_terms_and_privacy_policies">By tapping <b><u>I agree</u></b>, you agree to create an account and to Cambook’s terms and Privacy Policies.</string>
     <string name="the_privacy_policy_describes_the_ways_we_can_use_the_nformation_we_collect_when_you_create_an_account">The <b><u>Privacy Policy</u></b> describes the ways we can use the information we collect when you create an account.</string>
+    <string name="taking_photographs_processing_images_and_ensuring_they_meet_the_desired_results">Taking photographs, processing images, and ensuring they meet the desired results.</string>
 </resources>
