@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="45dp"
+    android:background="@color/white"
+    tools:context=".pre_debut_confirmEventFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cancel_svgrepo_com" />
+
+        <TextView
+            android:id="@+id/confirmTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cancel"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/intermedium"
+            android:text="Confirm Event"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmTxt"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chooseevent_pre_debut" />
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/intermedium"
+                    android:text="Pre-Debut Event"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/top"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/samplePics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/pic1"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pre_debutalbum2" />
+
+            <ImageView
+                android:id="@+id/pic2"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/pic1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pre_debutalbum4" />
+
+            <ImageView
+                android:id="@+id/pic3"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/pic2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pre_debutalbum6" />
+
+            <ImageView
+                android:id="@+id/pic4"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/pic3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pre_debutalbum8" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/packagesTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/samplePics"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/intermedium"
+            android:text="Our Packages"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/packageARadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packagesTxt"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/packageAText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_toStartOf="@+id/radioButtonPackageA"
+                    android:fontFamily="@font/intermedium"
+                    android:text="Package A"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPackageA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false" />
+            </RelativeLayout>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/packageADetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packageARadioGroup"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/packageAPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="PRICE"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/packageADetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageAPrice"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="HOURS"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageADetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageADetail1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="QUALITY"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageADetail3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageADetail2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="STORAGE"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageADetail4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageADetail3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="PROPS"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageADetail5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageADetail4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="OUTPUT"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/packageBRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packageADetails"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/packageBText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_toStartOf="@+id/radioButtonPackageB"
+                    android:fontFamily="@font/intermedium"
+                    android:text="Package B"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPackageB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false" />
+            </RelativeLayout>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/packageBDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packageBRadioGroup"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/packageBPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="PRICE"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/packageBDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageBPrice"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="HOURS"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageBDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageBDetail1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="QUALITY"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageBDetail3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageBDetail2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="VENUE"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageBDetail4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageBDetail3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="STORAGE"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageBDetail5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageBDetail4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="PROPS"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/packageBDetail6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/packageBDetail5"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/interregular"
+                android:text="OUTPUT"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addOnsTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packageBDetails"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="ADD ONS:"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addOns1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addOnsTxt"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/addOnsDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/interregular"
+                android:text="DETAIL1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/addOnsDetail1Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/addOnsDetail1"
+                android:fontFamily="@font/intersemibold"
+                android:text="PRICE"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAddOns1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="335dp"
+                android:layout_marginEnd="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addOns2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addOns1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/addOnsDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/interregular"
+                android:text="DETAIL2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/addOnsDetail2Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/addOnsDetail2"
+                android:fontFamily="@font/intersemibold"
+                android:text="PRICE"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAddOns2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="335dp"
+                android:layout_marginEnd="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectDatetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addOns2"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="SELECT BOOKING DATE"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectBookingDate"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/selectDatetxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/selectedDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="Select Date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:text="Edit"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectLocationtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectBookingDate"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="LOCATION"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/province_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectLocationtxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Province"
+            android:textColorHint="@color/gray"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:startIconDrawable="@drawable/location_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/provincePay"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/interregular"
+                android:paddingStart="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/province_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="City"
+            android:textColorHint="@color/gray"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:startIconDrawable="@drawable/location_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cityPay"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/interregular"
+                android:paddingStart="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/barangay_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/city_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Barangay"
+            android:textColorHint="@color/gray"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:startIconDrawable="@drawable/location_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/barangayPay"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/interregular"
+                android:paddingStart="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/downpaymentSsTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barangay_layout"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="UPLOAD DOWNPAYMENT PROOF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/uploadDpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/downpaymentSsTxt"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/uploadDpTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/interregular"
+                android:text="Upload Image here:"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/uploadDpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/uploadDpTxt"
+                android:fontFamily="@font/intersemibold"
+                android:text="Click to upload"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dpNoteTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uploadDpContainer"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:fontFamily="@font/interregular"
+            android:text="Note: Downpayment price will be 2000 for every event that you want. Upload a screenshot of a successful downpayment through GCash and please wait for the notification to see if the uploaded image is saved."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/dpNoteTxt"
+            android:layout_marginTop="30dp"
+            android:background="@color/black"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/packagesNxtButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/intermedium"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Book Now!"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packagesNxtButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/interregular"
+            android:text="Note: Before clicking the next button, please double check the selected packages, add ons, date and location. Please make sure that is the correct details that you want."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+</ScrollView>

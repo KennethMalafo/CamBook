@@ -21,7 +21,10 @@ public class policy_agreement extends AppCompatActivity {
 
         policyCheckbox = findViewById(R.id.policyCheckbox);
         TextView errorText = findViewById(R.id.errorText);
-        button = (Button) findViewById(R.id.agreebtn);
+        button = findViewById(R.id.agreebtn);
+
+        String Error = getResources().getString(R.string.Please_check_the_policy_agreement_checkbox_to_proceed_);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,12 +32,11 @@ public class policy_agreement extends AppCompatActivity {
                 if (policyCheckbox.isChecked()) {
                     create_user();
                 } else {
-                    errorText.setText("Please check the policy agreement checkbox to proceed.");
+                    errorText.setText(Error);
                 }
             }
-
             private void create_user() {
-                Intent intent = new Intent(policy_agreement.this, homepage.class);
+                Intent intent = new Intent(policy_agreement.this, services.class);
                 startActivity(intent);
                 finish();
             }

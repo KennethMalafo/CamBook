@@ -9,10 +9,11 @@
 
     <ImageButton
         android:id="@+id/arrow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/back_arrow"
         android:background="#00ffffff"
+        android:scaleType="centerCrop"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"

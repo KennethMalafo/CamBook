@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <!-- This shape defines the background with a transparent fill -->
+        <shape>
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item>
+        <!-- This shape defines the stroke -->
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="10dp"
+                android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+</layer-list>

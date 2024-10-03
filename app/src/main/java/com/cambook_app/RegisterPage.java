@@ -26,6 +26,7 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class RegisterPage extends AppCompatActivity {
+
     TextInputEditText Fname, Username, Province, City, Barangay, Email, Password;
     Button DOB, Register;
     RadioGroup Gender;
@@ -40,7 +41,6 @@ public class RegisterPage extends AppCompatActivity {
     private static final Pattern PASSWORD_PATTERN =
 
             Pattern.compile("^" +
-                    "(?=S+$)" +                     // no white spaces
                     ".{6,}" +                              // at least 6 characters
                     "$");
 
@@ -48,6 +48,8 @@ public class RegisterPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
+
+        String Dash = getResources().getString(R.string.dash);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -65,7 +67,7 @@ public class RegisterPage extends AppCompatActivity {
 
         arrow1 = findViewById(R.id.arrow1);
 
-        UsersInfo = FirebaseDatabase.getInstance().getReference().child("User");
+        UsersInfo = FirebaseDatabase.getInstance().getReference().child("User/UserID");
 
         arrow1.setOnClickListener(view -> {
             Intent intent = new Intent(RegisterPage.this, MainActivity.class);
@@ -93,14 +95,12 @@ public class RegisterPage extends AppCompatActivity {
                     RegisterPage.this,
                     (view, year1, monthOfYear, dayOfMonth) -> {
                         // on below line we are setting date to our text view.
-                        DOB.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year1);
+                        DOB.setText(dayOfMonth + Dash + (monthOfYear + 1) + Dash + year1);
 
                     },
-                    // on below line we are passing year,
-                    // month and day for selected date in our date picker.
+                    // on below line we are passing year, month and day for selected date in our date picker.
                     year, month, day);
-            // at last we are calling show to
-            // display our date picker dialog.
+            // at last we are calling show to display our date picker dialog.
             datePickerDialog.show();
         });
 
@@ -179,7 +179,7 @@ public class RegisterPage extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             // Get the UID of the user
-                            String uid = user.getUid();
+                            String uid = Objects.requireNonNull(user).getUid();
                             Toast.makeText(RegisterPage.this, "Successfully Created an Account",
                                     Toast.LENGTH_SHORT).show();
                             Intent verificationIntent = new Intent(RegisterPage.this, policy_agreement.class);
@@ -194,25 +194,4 @@ public class RegisterPage extends AppCompatActivity {
                     });
         });
     }
-    /*@Override
-    public void onBackPressed() {
-
-        //Exit Dialogue
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegisterPage.this);
-        alertDialog.setTitle("Exit App");
-        alertDialog.setMessage("Do you want to Exit CamBook?");
-        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finishAffinity();
-            }
-        });
-        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        alertDialog.show();
-    }**/
 }

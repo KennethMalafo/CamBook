@@ -74,6 +74,15 @@ public class LogInPage extends AppCompatActivity {
                 Toast.makeText(LogInPage.this, "Password too weak!", Toast.LENGTH_SHORT).show();
                 return;
             }
+            if (password.contains(" ")){
+                Toast.makeText(LogInPage.this, "Your password mustn't have a space!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (password.contains(".")){
+                Toast.makeText(LogInPage.this, "Your password mustn't have a period!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
@@ -81,9 +90,9 @@ public class LogInPage extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LogInPage.this, "You're logged in!",
-                                    Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LogInPage.this, homepage.class);
+                            Toast.makeText(LogInPage.this, "You're logged in!", Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(LogInPage.this, startingPage.class);
                             startActivity(intent);
                             finish();
                         } else {
@@ -95,25 +104,4 @@ public class LogInPage extends AppCompatActivity {
 
         });
     }
-    /*@Override
-    public void onBackPressed() {
-
-        //Exit Dialogue
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(LogInPage.this);
-        alertDialog.setTitle("Exit App");
-        alertDialog.setMessage("Do you want to Exit CamBook?");
-        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finishAffinity();
-            }
-        });
-        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        alertDialog.show();
-    }**/
 }

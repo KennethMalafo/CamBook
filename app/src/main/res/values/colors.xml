@@ -12,5 +12,9 @@
     <color name="bg_for_log">#DEDEDE</color>
     <color name="brown">#4A2800</color>
     <color name="red">#FF0000</color>
-    <color name="textColorHighlight">#4DD81B60</color>
+    <color name="ash">#9F9F9F</color>
+    <color name="white_fade">#CDCDCD</color>
+    <color name="cream">#FFFCD4</color>
+    <color name="yellow">#FDD835</color>
+    <color name="green">#43A047</color>
 </resources>

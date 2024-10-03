@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CamBook_App"
         tools:targetApi="31">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api_key" />
@@ -25,14 +26,26 @@
             android:required="false" />
 
         <activity
-            android:name=".SplashScreen"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".startingPage"
+            android:exported="false"/>
+        <activity
+            android:name=".adminHome"
+            android:exported="false" />
+        <activity
+            android:name=".adminCreate"
+            android:exported="false" />
+        <activity
+            android:name=".adminLogIn"
+            android:exported="false" />
+        <activity
+            android:name=".AddReviews"
+            android:exported="false" />
+        <activity
+            android:name=".UserBookings"
+            android:exported="false" />
+        <activity
+            android:name=".bookingTransaction"
+            android:exported="false" />
         <activity
             android:name=".policy_agreement"
             android:exported="false" />
@@ -44,15 +57,18 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".services"
             android:exported="false" />
         <activity
             android:name=".settings"
-            android:exported="false" />
-        <activity
-            android:name=".homepage"
             android:exported="false" />
     </application>
 

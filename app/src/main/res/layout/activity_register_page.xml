@@ -18,16 +18,17 @@
 
             <ImageButton
                 android:id="@+id/arrow1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="35dp"
                 android:background="#00ffffff"
+                android:scaleType="centerCrop"
                 android:clickable="true"
                 android:focusable="true"
-                android:src="@drawable/back_button" />
+                android:src="@drawable/back_arrow" />
 
             <TextView
                 android:id="@+id/t13"
@@ -85,7 +86,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="Full name"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/fullname_24"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="@color/black"
@@ -123,7 +123,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="Username"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/username_24"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="@color/black"
@@ -133,9 +132,7 @@
                     android:id="@+id/username"
                     android:layout_width="323dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/t6"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -163,7 +160,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="Province"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/location_24"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="@color/black"
@@ -174,7 +170,6 @@
                     android:layout_width="323dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -189,7 +184,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="City"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/location_24"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="@color/black"
@@ -200,7 +194,6 @@
                     android:layout_width="323dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -215,7 +208,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="Barangay"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/location_24"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="@color/black"
@@ -226,7 +218,6 @@
                     android:layout_width="323dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
 
@@ -327,7 +318,6 @@
                     android:textColor="@color/white"/>
             </RadioGroup>
 
-
             <TextView
                 android:id="@+id/t7"
                 android:layout_width="wrap_content"
@@ -350,7 +340,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="Email address"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
                 app:startIconDrawable="@drawable/login_black_24"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="@color/black"
@@ -359,10 +348,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Email"
                     android:layout_width="323dp"
-                    android:layout_height="65dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/book"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -392,9 +380,6 @@
                 android:layout_marginTop="20dp"
                 android:hint="Password"
                 android:textColorHint="@color/white"
-                android:theme="@style/EditTextThemeOverlay"
-                app:counterEnabled="true"
-                app:counterMaxLength="20"
                 app:passwordToggleEnabled="true"
                 app:startIconDrawable="@drawable/password_24"
                 app:boxBackgroundMode="outline"
@@ -406,7 +391,6 @@
                     android:layout_width="323dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/t8"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/interregular"
                     android:paddingStart="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -422,7 +406,7 @@
 
             <Button
                 android:id="@+id/Register"
-                android:layout_width="200dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pass_layout"
                 android:layout_centerHorizontal="true"
